@@ -4,13 +4,13 @@
 
 # Supported Firmwares
 
-*   FW 9.00 (tested works)
-*   FW 9.03 / 9.04(??)  (tested works)
-*   FW 9.50 / 9.51 / 9.60  (not tested yet)
-*   FW 10.00 / 10.01 (not tested yet)
-*   FW 10.50 / 10.70 / 10.71 (not tested yet) 
-*   FW 11.00 (not tested yet)
-    more can be added ...
+*   FW 9.00
+*   FW 9.03 / 9.04(??)
+*   FW 9.50 / 9.51 / 9.60
+*   FW 10.00 / 10.01 
+*   FW 10.50 / 10.70 / 10.71
+*   FW 11.00
+
 
 
 ## Compile
