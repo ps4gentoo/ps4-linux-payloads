@@ -5,12 +5,12 @@
 # Supported Firmwares
 
 *   FW 9.00
-*   FW 9.03 / 9.04(??)
+*   FW 9.03 / 9.04
 *   FW 9.50 / 9.51 / 9.60
 *   FW 10.00 / 10.01 
 *   FW 10.50 / 10.70 / 10.71
-*   FW 11.00 / 
-*   FW 11.50(soon)
+*   FW 11.00
+*   FW 11.50 (soon)
 *   FW 12.00 / 12.02..(soon)
 
 
@@ -28,17 +28,11 @@
 * MAAARCAN!!!!! the old linux group failoverfl0w / ps3itateam (Rancido) for fixing GPU Power on the PS4 Pro!
 * sleirsgoevy and more. 
 
-# Download
-
-Get the [[Download].](https://github.com/ps4gentoo/ps4-linux-payloads/releases/tag/v1.0)
-
-
 
 # For Firmware 5.05 and 6.72 use the Old Linux Loader Source.
 
+1 Loader: https://github.com/ps4gentoo/PS4-Linux-Loader
 
-1 ```https://github.com/ps4gentoo/PS4-Linux-Loader```
+2 Kexec: https://github.com/ps4gentoo/ps4-kexec
 
-2 ```https://github.com/ps4gentoo/ps4-kexec```
-
-3 ```https://github.com/ps4boot/ps4-payload-sdk```
+3 SDK: https://github.com/ps4boot/ps4-payload-sdk
