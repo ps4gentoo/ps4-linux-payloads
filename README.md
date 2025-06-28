@@ -1,4 +1,4 @@
-# ![PS4](https://img.shields.io/badge/-PS4-003791?style=flat&logo=PlayStation) Linux Payloads for FW 9.00 - 11.00 (Aeolia & Belize(2) & Baikal)
+# ![PS4](https://img.shields.io/badge/-PS4-003791?style=flat&logo=PlayStation) Linux Payloads for FW 9.00 - 12.00 (Southbridge: Aeolia & Belize(2) & Baikal)
 
 **Linux-Payloads** kexec for PlayStation 4.
 
@@ -19,17 +19,17 @@
     cd ps4-linux-payloads/linux
     make
     
-## Note
-* Don`t use Binload Payload for sending the Payload... it doesnt work fine (linuxloader source is .....) just add the Payload on  your Host and it works fine. 
+## Note 
 * Don`t use PRO Payloads for Phat or Slim. 
 
 ## Credits
 
 * MAAARCAN!!!!! the old linux group failoverfl0w / ps3itateam (Rancido) for fixing GPU Power on the PS4 Pro!
 * sleirsgoevy and more. 
+* AlAzif
+* bestpig 
 
-
-# For Firmware 5.05 and 6.72 use the Old Linux Loader Source.
+# For Firmware 5.05 and 6.72 use the "old" Linux Loader Source.
 
 1 Loader: https://github.com/ps4gentoo/PS4-Linux-Loader
 
