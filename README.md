@@ -22,15 +22,17 @@
 ## Note 
 * Don`t use PRO Payloads for Phat or Slim. 
 
-## Credits
 
-* MAAARCAN!!!!! the old linux group failoverfl0w / ps3itateam (Rancido) for fixing GPU Power on the PS4 Pro!
-* sleirsgoevy and more. 
+## Credits
+* marcan, shuffle2, eeply, rancido, valeryy 
+
+* sleirsgoevy
 * AlAzif
 * bestpig 
+* others ... 
+
 
 # For Firmware 5.05 and 6.72 use the "old" Linux Loader Source.
-
 1 Loader: https://github.com/ps4gentoo/PS4-Linux-Loader
 
 2 Kexec: https://github.com/ps4gentoo/ps4-kexec
