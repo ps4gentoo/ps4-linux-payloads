@@ -100,7 +100,7 @@
 #define kern_off_set_cu_power_gate 0x4C30F0
 #define kern_off_pstate_before_shutdown 0x3323E0
 
-#elif defined PS4_10_00 //EinTime23
+#elif defined PS4_10_00 //EinTim23
 #define kern_off_printf	0xC50F0
 #define kern_off_snprintf 0xC53F0
 #define kern_off_copyin	0x472F10
@@ -134,7 +134,7 @@
 #define kern_off_set_cu_power_gate 0x4CEA80
 #define kern_off_pstate_before_shutdown 0x4812d0
 
-#elif defined PS4_10_50 //not tested offsets from EchoStretch
+#elif defined PS4_10_50 //EchoStretch
 #define kern_off_printf 0x00450e80
 #define kern_off_snprintf 0x00451180
 #define kern_off_copyin 0x000d7560
@@ -168,7 +168,7 @@
 #define kern_off_set_cu_power_gate 0x004d8e50
 #define kern_off_pstate_before_shutdown 0x0045dcc0
 
-#elif defined PS4_11_00 //EinTime23
+#elif defined PS4_11_00 //EinTim23
 #define kern_off_printf	0x2fcbd0
 #define kern_off_snprintf 0x2fced0
 #define kern_off_copyin	0x2ddfe0
@@ -201,4 +201,38 @@
 #define kern_off_update_vddnp 0x4b10a0
 #define kern_off_set_cu_power_gate 0x4b14b0
 #define kern_off_pstate_before_shutdown 0x198650
+
+#elif defined PS4_12_00 //bestpig
+#define kern_off_printf 0x2e03e0
+#define kern_off_snprintf 0x2e06e0
+#define kern_off_copyin 0x2bd670
+#define kern_off_copyout 0x2bd580
+#define kern_off_copyinstr 0x2bdb20
+#define kern_off_kmem_alloc_contig 0x24D3D0
+#define kern_off_kmem_free 0x465bb0
+#define kern_off_pmap_extract 0x573d0
+#define kern_off_pmap_protect 0x58570
+#define kern_off_sched_pin 0x231600
+#define kern_off_sched_unpin 0x231620
+#define kern_off_smp_rendezvous 0x1ad4e0
+#define kern_off_smp_no_rendevous_barrier 0x1ad2f0
+#define kern_off_icc_query_nowait 0x447ad0
+#define kern_off_kernel_map 0x22d1d50
+#define kern_off_sysent 0x1102b70
+#define kern_off_kernel_pmap_store 0x1b2c3a0
+#define kern_off_Starsha_UcodeInfo 0x0
+#define kern_off_gpu_devid_is_9924 0x4ac540
+#define kern_off_gc_get_fw_info 0x4baef0
+#define kern_off_pml4pml4i 0x1b2c390
+#define kern_off_dmpml4i 0x1b2c394
+#define kern_off_dmpdpi 0x1b2c398
+#define kern_off_eap_hdd_key 0x26c4cf0
+#define kern_off_edid 0x275e148
+#define kern_off_wlanbt 0x4789f0
+#define kern_off_kern_reboot 0x3a1d70
+#define kern_off_set_gpu_freq 0x4b9a30
+#define kern_off_set_pstate 0x4bbe00
+#define kern_off_update_vddnp 0x4b9fd0
+#define kern_off_set_cu_power_gate 0x4ba3e0
+#define kern_off_pstate_before_shutdown 0x3a2360
 #endif
