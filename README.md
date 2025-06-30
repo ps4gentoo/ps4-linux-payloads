@@ -11,7 +11,7 @@
 *   FW 10.50 / 10.70 / 10.71
 *   FW 11.00
 *   FW 11.50 (soon)
-*   FW 12.00 (doesnt work) / 12.02 (works)
+*   FW 12.00 / 12.02
 
 
 ## Compile
