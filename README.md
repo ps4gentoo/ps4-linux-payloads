@@ -4,6 +4,8 @@
 
 # Supported Firmwares
 
+*   FW 5,05 (soon)
+*   FW 6.72  *Read Note
 *   FW 9.00
 *   FW 9.03 / 9.04
 *   FW 9.50 / 9.51 / 9.60
@@ -22,6 +24,7 @@
 ## Note 
 * Don`t use PRO Payloads for Phat or Slim. 
 
+* Firmware 6.72, we need this Linux loader for a bigger kernel like kernel 6.y for FW 6.72 (I'm trying to fix the reboot process), if you are using the old kernel 4.14.y 4.19.y, 5.4.y kernel, you will be fine with the old Linux loader, it will have slightly better performance... why? don't ask :D
 
 ## Credits
 * marcan, shuffle2, eeply, rancido, valeryy 
