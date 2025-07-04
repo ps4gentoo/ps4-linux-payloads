@@ -5,8 +5,8 @@
 
 # Supported Firmwares
 
-*   FW 5,05 (soon)  ⛔  
-*   FW 6.72  *Read Note ✅ 
+*   FW 5.00 / 5.01 / 5.03 / 5.05 (soon)  ⛔  (Todo: Reboot fix)
+*   FW 6.70 / 6.71 / 6.72  *Read Note ✅     (Todo: Reboot fix)
 *   FW 9.00 ✅ 
 *   FW 9.03 / 9.04 ✅ 
 *   FW 9.50 / 9.51 / 9.60 ✅ 
@@ -41,7 +41,7 @@ vram.txt with this you can change the vram over a textfile.
 
 ## Credits
 * marcan, shuffle2, eeply, rancido, valeryy 
-* sleirsgoevy
+* sleirsgoevy (for the script)
 * AlAzif
 * bestpig 
 * others ... 
