@@ -8,31 +8,20 @@
 #include <time.h>
 #include <ps4-offsets/kernel.h>
 
-#if defined(__9_00__)
+#if defined(__5_05_)
+asm("ps4kexec:\n.incbin \"ps4-kexec-505/kexec.bin\"\nps4kexec_end:\n");
+#include "magic.h"
+#elif defined(__6_72__)
+asm("ps4kexec:\n.incbin \"ps4-kexec-672/kexec.bin\"\nps4kexec_end:\n");
+#include "magic.h"
+#elif defined(__9_00__)
 asm("ps4kexec:\n.incbin \"ps4-kexec-900/kexec.bin\"\nps4kexec_end:\n");
-#include "magic.h"
-#elif defined(__9_03__)
-asm("ps4kexec:\n.incbin \"ps4-kexec-903/kexec.bin\"\nps4kexec_end:\n");
-#include "magic.h"
-#elif defined(__9_60__)
-asm("ps4kexec:\n.incbin \"ps4-kexec-960/kexec.bin\"\nps4kexec_end:\n");
-#include "magic.h"
-#elif defined(__10_00__)
-asm("ps4kexec:\n.incbin \"ps4-kexec-1000/kexec.bin\"\nps4kexec_end:\n");
-#include "magic.h"
-#elif defined(__10_50__)
-asm("ps4kexec:\n.incbin \"ps4-kexec-1050/kexec.bin\"\nps4kexec_end:\n");
-#include "magic.h"
-#elif defined(__11_00__)
-asm("ps4kexec:\n.incbin \"ps4-kexec-1100/kexec.bin\"\nps4kexec_end:\n");
-#include "magic.h"
-#elif defined(__12_00__)
-asm("ps4kexec:\n.incbin \"ps4-kexec-1200/kexec.bin\"\nps4kexec_end:\n");
 #include "magic.h"
 #else
 #error "unsupported firmware"
 #endif
-
+void* dlopen(const char* path, int flags);
+void* dlsym(void* handle, const char* symbol);
 extern char ps4kexec[];
 extern char ps4kexec_end[];
 
@@ -55,7 +44,7 @@ void kernel_main()
     //set pstate before shutdown, needed for PS4 Pro console
     *(char*)(kernel_base + kern_off_pstate_before_shutdown) = 0x03;
     asm volatile("mov %%cr0, %%rax\nbts $16, %%rax\nmov %%rax, %%cr0\nsti":::"rax");
-
+        
     unsigned long long early_printf = kernel_base + kernel_offset_printf;
     unsigned long long kmem_alloc = kernel_base + kernel_offset_kmem_alloc;
     unsigned long long kernel_map = kernel_base + kernel_offset_kernel_map;
@@ -95,9 +84,27 @@ int evf_open(char*);
 void evf_cancel(int, unsigned long long, unsigned long long);
 void evf_close(int);
 
-void reboot_thread(void* _)
-{
+void reboot_thread_672(void* _) {
     nanosleep((const struct timespec*)"\1\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0", NULL);
+    int evf = evf_open("SceSysCoreReboot");
+    evf_cancel(evf, 0x4000, 0);
+    evf_close(evf);
+    kill(1, SIGUSR1);
+}
+
+void reboot_thread_900(void* _) {
+    struct timespec ts = {1, 0};
+    nanosleep(&ts, NULL);
+
+    void* handle = dlopen("/system/common/lib/libSceSysCore.sprx", 0);
+    if (handle) {
+        void (*sceSysCoreReboot)(int) = dlsym(handle, "sceSysCoreReboot");
+        if (sceSysCoreReboot) {
+            sceSysCoreReboot(0);
+            return;
+        }
+    }
+
     int evf = evf_open("SceSysCoreReboot");
     evf_cancel(evf, 0x4000, 0);
     evf_close(evf);
@@ -214,20 +221,24 @@ int main()
         vramgb = VRAM_GB_DEFAULT;
 
     kexec(kernel_main, (void*)0);
-    long x, y;
-    struct thr_param thr = {
-        .start_func = reboot_thread,
-        .arg = NULL,
-        .stack_base = mmap(NULL, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0),
-        .stack_size = 16384,
-        .tls_base = NULL,
-        .tls_size = 0,
-        .child_tid = &x,
-        .parent_tid = &y,
-        .flags = 0,
-        .rtp = NULL
-    };
-    thr_new(&thr, sizeof(thr));
+long x, y;
+struct thr_param thr = {
+#ifdef __6_72__
+    .start_func = reboot_thread_672,
+#else
+    .start_func = reboot_thread_900,
+#endif
+    .arg = NULL,
+    .stack_base = mmap(NULL, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0),
+    .stack_size = 16384,
+    .tls_base = NULL,
+    .tls_size = 0,
+    .child_tid = &x,
+    .parent_tid = &y,
+    .flags = 0,
+    .rtp = NULL
+};
+thr_new(&thr, sizeof(thr));
     kexec_load(kernel, kernel_size, initrd, initrd_size, cmdline, vramgb);
     for(;;);
 }

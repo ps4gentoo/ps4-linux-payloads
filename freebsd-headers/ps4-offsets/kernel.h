@@ -1,3 +1,6 @@
+#ifdef __6_72__
+#include "672.h"
+#else
 #ifdef __9_00__
 #include "900.h"
 #else
@@ -20,6 +23,7 @@
 #include "1200.h"
 #else
 #error "unsupported firmware"
+#endif
 #endif
 #endif
 #endif
