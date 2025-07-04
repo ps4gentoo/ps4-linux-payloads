@@ -21,18 +21,26 @@
     git clone https://github.com/ps4gentoo/ps4-linux-payloads
     cd ps4-linux-payloads/linux
     make
-    
+
+## Info
+the internal path by default is at: /data/linux/boot  the rest is coming from the initramfs.cpio.gz init configuration
+so you can go into the rescue shell without a usb stick just upload the bzImage and initramfs.cpio.gz over ftp to your PS4 Drive
+/data/linux/boot/[bzimage,initramfs.cpio.gz] and of course it will work too with a USB / HDD Drive.  USB have highest prio so if a USB is connected he will  use this bzImage and initramfs.cpio.gz from there 
+
+bootargs.txt you can also add a textfile for changing the cmdline.
+vram.txt with this you can change the vram over a textfile.
+
 ## Note 
 * Don`t use PRO Payloads for Phat or Slim. 
 
 * Firmware 6.72, we need this Linux loader for a bigger kernel like kernel 6.y for FW 6.72 (I'm trying to fix the reboot process), if you are using the old kernel 4.14.y 4.19.y, 5.4.y kernel, you will be fine with the old Linux loader, it will have slightly better performance... why? don't ask :D
-
-## Info
 * Difference between old and new linux loader . no pmap patch in the new one #ifndef DO_NOT_REMAP_RWX  in the Makefile in the kexec.
+
+
+
 
 ## Credits
 * marcan, shuffle2, eeply, rancido, valeryy 
-
 * sleirsgoevy
 * AlAzif
 * bestpig 
