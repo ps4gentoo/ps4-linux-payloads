@@ -1,19 +1,20 @@
-# ![PS4](https://img.shields.io/badge/-PS4-003791?style=flat&logo=PlayStation) Linux Payloads for FW 9.00 - 12.00 (Southbridge: Aeolia & Belize(2) & Baikal)
+# ![PS4](https://img.shields.io/badge/-PS4-003791?style=flat&logo=PlayStation) Linux Payloads for FW 6.72 - 12.00 
+(Southbridge: Aeolia & Belize(2) & Baikal)
 
 **Linux-Payloads** kexec for PlayStation 4.
 
 # Supported Firmwares
 
-*   FW 5,05 (soon)
-*   FW 6.72  *Read Note
-*   FW 9.00
-*   FW 9.03 / 9.04
-*   FW 9.50 / 9.51 / 9.60
-*   FW 10.00 / 10.01 
-*   FW 10.50 / 10.70 / 10.71
-*   FW 11.00
-*   FW 11.50 (soon)
-*   FW 12.00 / 12.02
+*   FW 5,05 (soon)  ⛔  
+*   FW 6.72  *Read Note ✅ 
+*   FW 9.00 ✅ 
+*   FW 9.03 / 9.04 ✅ 
+*   FW 9.50 / 9.51 / 9.60 ✅ 
+*   FW 10.00 / 10.01 ✅ 
+*   FW 10.50 / 10.70 / 10.71 ✅ 
+*   FW 11.00 ✅ 
+*   FW 11.50 (soon)  ⛔  
+*   FW 12.00 / 12.02 ✅ 
 
 
 ## Compile
