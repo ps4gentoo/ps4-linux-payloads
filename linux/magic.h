@@ -31,7 +31,7 @@
 #define kern_off_update_vddnp 0x4E0B10
 #define kern_off_set_cu_power_gate 0x4E0F20
 #define kern_off_pstate_before_shutdown 0x20734E
-#define kern_off_set_nclk_mem_spd 0x19A390 //add this to all other Firmware
+#define kern_off_set_nclk_mem_spd 0x19A390
 
 #elif defined PS4_9_00 //codedwrench
 #define kern_off_printf	0x0B7A30
@@ -66,6 +66,7 @@
 #define kern_off_update_vddnp 0x4DE360
 #define kern_off_set_cu_power_gate 0x4DE770
 #define kern_off_pstate_before_shutdown 0x29A970
+#define kern_off_set_nclk_mem_spd 0
 
 #elif defined PS4_9_03 //mircoho
 #define kern_off_printf 0x0B79E0
@@ -100,6 +101,7 @@
 #define kern_off_update_vddnp 0x4DC260
 #define kern_off_set_cu_power_gate 0x4DC670
 #define kern_off_pstate_before_shutdown 0x29A5F0
+#define kern_off_set_nclk_mem_spd 0
 
 #elif defined PS4_9_60 //Eintim23
 #define kern_off_printf	0x205470
@@ -134,6 +136,7 @@
 #define kern_off_update_vddnp 0x4C2CE0
 #define kern_off_set_cu_power_gate 0x4C30F0
 #define kern_off_pstate_before_shutdown 0x3323E0
+#define kern_off_set_nclk_mem_spd 0
 
 #elif defined PS4_10_00 //EinTim23
 #define kern_off_printf	0xC50F0
@@ -168,6 +171,7 @@
 #define kern_off_update_vddnp 0x4CE670
 #define kern_off_set_cu_power_gate 0x4CEA80
 #define kern_off_pstate_before_shutdown 0x4812d0
+#define kern_off_set_nclk_mem_spd 0
 
 #elif defined PS4_10_50 //EchoStretch
 #define kern_off_printf 0x00450e80
@@ -202,6 +206,7 @@
 #define kern_off_update_vddnp 0x004d8a40
 #define kern_off_set_cu_power_gate 0x004d8e50
 #define kern_off_pstate_before_shutdown 0x0045dcc0
+#define kern_off_set_nclk_mem_spd 0
 
 #elif defined PS4_11_00 //EinTim23
 #define kern_off_printf	0x2fcbd0
@@ -236,6 +241,7 @@
 #define kern_off_update_vddnp 0x4b10a0
 #define kern_off_set_cu_power_gate 0x4b14b0
 #define kern_off_pstate_before_shutdown 0x198650
+#define kern_off_set_nclk_mem_spd 0x2F56A0
 
 #elif defined PS4_12_00 //bestpig
 #define kern_off_printf 0x2e03e0
@@ -270,4 +276,5 @@
 #define kern_off_update_vddnp 0x4b9fd0
 #define kern_off_set_cu_power_gate 0x4ba3e0
 #define kern_off_pstate_before_shutdown 0x3a2360
+#define kern_off_set_nclk_mem_spd 0
 #endif
