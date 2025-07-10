@@ -44,10 +44,10 @@ Baikal: ``console=uart8250,mmio32,0xC890E000``
 
 
 ## Credits
-* marcan, shuffle2, eeply, rancido, valeryy 
-* sleirsgoevy (for the script)
-* AlAzif
-* bestpig 
+* marcan, shuffle2, eeply, rancido, valeryy, ethylamine, Joonie86 (Linux)
+* sleirsgoevy (for the script and better exploit FW 672) 
+* AlAzif / KiwiDog / Specter / Celesteblue / ChendoChap / zecoxao / SocraticBliss / ctn123 (Exploit and Fun Stuff for the Console)
+* bestpig / EchoStretch / EinTim23 (Offsets)
 * others ... 
 
 
