@@ -199,7 +199,7 @@ int main()
             }
     }
     else
-        cmdline = "panic=0 clocksource=tsc consoleblank=0 net.ifnames=0 radeon.dpm=0 amdgpu.dpm=0 drm.debug=0 console=uart8250,mmio32,0xC890E000 console=ttyS0,115200n8 console=tty0 video=HDMI-A-1:1920x1080-24@60";
+        cmdline = "panic=0 clocksource=tsc consoleblank=0 net.ifnames=0 radeon.dpm=0 amdgpu.dpm=0 drm.debug=0 console=ttyS0,115200n8 console=tty0 video=HDMI-A-1:1920x1080@60";
 
     // video=HDMI-A-1:1920x1080-24@60      drm.edid_firmware=edid/1920x1080.bin  drm.edid_firmware=edid/my_edid.bin
 
