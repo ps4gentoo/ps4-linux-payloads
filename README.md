@@ -31,6 +31,10 @@ bootargs.txt you can also add a textfile for changing the cmdline.
 vram.txt with this you can change the vram over a textfile.
 
 ## Note 
+* if you need UART just add this to the cmdline i have disabled .... just for now on newer Kernel it doesnt work.
+Aeolia/Belize: ``console=uart8250,mmio32,0xd0340000``
+Baikal: ``console=uart8250,mmio32,0xC890E000``
+
 * Don`t use PRO Payloads for Phat or Slim. 
 
 * Firmware 6.72, we need this Linux loader for a bigger kernel like kernel 6.y for FW 6.72 (I'm trying to fix the reboot process), if you are using the old kernel 4.14.y 4.19.y, 5.4.y kernel, you will be fine with the old Linux loader, it will have slightly better performance... why? don't ask :D
