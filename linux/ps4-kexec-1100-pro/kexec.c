@@ -77,6 +77,7 @@ int sys_kexec(void *td, struct sys_kexec_args *uap)
         goto cleanup;
     }
 
+    kern.set_nclk_mem_spd(8);
     // Set gpu frequencies and pstate   
     //                      FAT&SLIM / PRO
     kern.set_pstate(3);
