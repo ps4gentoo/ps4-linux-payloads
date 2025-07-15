@@ -14,7 +14,7 @@
 *   FW 10.50 / 10.70 / 10.71 ✅ 
 *   FW 11.00 ✅ 
 *   FW 11.50 (soon)  ⛔  
-*   FW 12.00 / 12.02 ✅ 
+*   FW 12.00 / 12.02 ✅ Note: Linux works but the GPU doesn't work, maybe the GPU soft reset doesn't work with lua?!?? Don't have a console on this firmware so can't test 
 
 
 ## Compile
