@@ -77,10 +77,10 @@ int sys_kexec(void *td, struct sys_kexec_args *uap)
         goto cleanup;
     }
 
-    kern.set_pstate(3);
-    kern.set_nclk_mem_spd(8);
     // Set gpu frequencies and pstate   
     //                      FAT&SLIM / PRO
+    kern.set_pstate(3);
+    kern.set_nclk_mem_spd(8);
 
     kern.set_gpu_freq(0, 800); //800 //800
     kern.set_gpu_freq(1, 673); //673 //853
@@ -93,7 +93,7 @@ int sys_kexec(void *td, struct sys_kexec_args *uap)
 
     kern.update_vddnp(0x12);
     kern.set_cu_power_gate(0x12);
-    
+
     // Copy in kernel image
     image = kernel_alloc_contig(uap->image_size);
     if (!image) {
