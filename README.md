@@ -12,7 +12,8 @@
 *   FW 10.50 / 10.70 / 10.71 ✅ 
 *   FW 11.00 ✅ 
 *   FW 11.50 (soon)  ⛔  
-*   FW 12.00 / 12.02 ✅ Note: You have to load on Firmware 12.00 and FW 12.02 the Linux Payload with the APP Payloadguest from AlAzif (THX) without your GPU will not work right.  
+*   FW 12.00 / 12.02 ✅ Note: You have to load on Firmware 12.00 and 12.02 the Linux Payload with the APP Payloadguest from AlAzif (THX) without your GPU will not work right.
+https://github.com/Al-Azif/ps4-payload-guest  
 Be sure you have saved your LUA Games license best is a 1:1 clone from your ps4 drive!! I take no responsibility if you lose your jailbreak!!!  
 
 
