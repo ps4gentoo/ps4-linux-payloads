@@ -19,10 +19,14 @@
 #ifdef __11_00__
 #include "1100.h"
 #else
+#ifdef __11_50__
+#include "1150.h"
+#else
 #ifdef __12_00__
 #include "1200.h"
 #else
 #error "unsupported firmware"
+#endif
 #endif
 #endif
 #endif
