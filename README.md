@@ -12,8 +12,9 @@
 *   FW 10.50 / 10.70 / 10.71 ✅ 
 *   FW 11.00 ✅ 
 *   FW 11.50 / 11.52 ✅ (not tested yet) 
-*   FW 12.00 / 12.02 ✅ Note: You have to load on Firmware 12.00 and 12.02 the Linux Payload with the APP Payloadguest from AlAzif (THX) without your GPU will not work right.
+*   FW 12.00 / 12.02 ✅ Note: You have to load on Firmware 12.00 and 12.02 the Linux Payload with the APP Payloadguest from AlAzif (THX) without your GPU will not work right and thx nerirififi
 https://github.com/Al-Azif/ps4-payload-guest  
+
 Be sure you have saved your LUA Games license best is a 1:1 clone from your ps4 drive!! I take no responsibility if you lose your jailbreak!!!  
 
 
@@ -36,10 +37,6 @@ vram.txt with this you can change the vram over a textfile.
 * if you need UART just add this to the cmdline i have disabled .... just for now on newer Kernel it doesnt work.
 Aeolia/Belize: ``console=uart8250,mmio32,0xd0340000``
 Baikal: ``console=uart8250,mmio32,0xC890E000``
-
-* Difference between old and new linux loader . no pmap patch in the new one #ifndef DO_NOT_REMAP_RWX  in the Makefile in the kexec.
-
-
 
 
 ## Credits
