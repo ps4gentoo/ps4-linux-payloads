@@ -24,9 +24,24 @@ jobs:
           cd linux
           make
 
-      - name: Upload all firmware payloads with folder structure
+      - name: Move .bin files to bin/ folder
+        run: |
+          mkdir -p artifacts/bin
+          find linux/fw* -name '*.bin' -exec cp --parents {} artifacts/bin/ \;
+
+      - name: Move .elf files to elf/ folder
+        run: |
+          mkdir -p artifacts/elf
+          find linux/fw* -name '*.elf' -exec cp --parents {} artifacts/elf/ \;
+
+      - name: Upload .bin payloads
         uses: actions/upload-artifact@v4
         with:
-          name: ps4-payloads
-          path: |
-            linux/fw*/*.bin
+          name: ps4-payloads-bin
+          path: artifacts/bin
+
+      - name: Upload .elf payloads
+        uses: actions/upload-artifact@v4
+        with:
+          name: ps4-payloads-elf
+          path: artifacts/elf
